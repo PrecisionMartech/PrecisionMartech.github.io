@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FacelessFast — Make Your First $500 This Month on TikTok Shop</title>
+  <meta name="description" content="Learn how to earn real commissions through TikTok Shop and Instagram Reels. No camera, no experience, no budget needed. First commission possible in 7 days."/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral: #FF6B6B;
+      --navy: #2D3561;
+      --cream: #FFF3E0;
+      --white: #ffffff;
+      --gray: #f7f7f7;
+      --text: #222222;
+      --light-text: #666666;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    nav .logo span { color: var(--coral); }
+    nav a.nav-cta {
+      background: var(--coral);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    nav a.nav-cta:hover { opacity: 0.85; }
+
+    /* SECTIONS */
+    section { padding: 70px 24px; }
+    .container { max-width: 860px; margin: 0 auto; }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 90px 24px 80px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+    .hero h1 span { color: var(--coral); }
+    .hero p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--coral);
+      color: white;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: transform 0.2s, opacity 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,107,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: 0.92; }
+    .hero-sub {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    .social-proof {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .social-proof div {
+      text-align: center;
+    }
+    .social-proof strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--coral);
+      font-family: 'Poppins', sans-serif;
+    }
+    .social-proof span {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* PROBLEM */
+    .problem { background: var(--cream); }
+    .problem h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+    .problem p {
+      font-size: 1.05rem;
+      color: var(--light-text);
+      margin-bottom: 14px;
+    }
+    .problem p strong { color: var(--text); }
+
+    /* COMPARISON */
+    .comparison { background: var(--white); }
+    .comparison h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 36px;
+      color: var(--navy);
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    thead tr { background: var(--navy); color: white; }
+    thead th {
+      padding: 16px 20px;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) { background: var(--gray); }
+    tbody td { padding: 14px 20px; }
+    tbody td:first-child { color: var(--light-text); }
+    tbody td:last-child { color: var(--navy); font-weight: 600; }
+
+    /* OUTCOMES */
+    .outcomes { background: var(--navy); color: white; }
+    .outcomes h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .outcome-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .outcome-card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .outcome-card p { font-size: 0.95rem; opacity: 0.9; }
+
+    /* INCOME */
+    .income { background: var(--cream); }
+    .income h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 10px;
+      color: var(--navy);
+    }
+    .income .subtitle {
+      color: var(--light-text);
+      margin-bottom: 36px;
+      font-size: 1rem;
+    }
+    .milestones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .milestone {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      border-top: 4px solid var(--coral);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .milestone .timeline {
+      font-size: 0.8rem;
+      color: var(--coral);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .milestone .amount {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .milestone .desc {
+      font-size: 0.85rem;
+      color: var(--light-text);
+    }
+    .disclaimer-box {
+      background: white;
+      border-left: 4px solid var(--coral);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+      color: var(--light-text);
+    }
+
+    /* MODULES */
+    .modules { background: white; }
+    .modules h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 10px;
+      color: var(--navy);
+      text-align: center;
+    }
+    .modules .subtitle {
+      text-align: center;
+      color: var(--light-text);
+      margin-bottom: 36px;
+    }
+    .module-list {
+      display: grid;
+      gap: 12px;
+    }
+    .module-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--gray);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .module-num {
+      background: var(--coral);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .module-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+    .module-item p {
+      font-size: 0.88rem;
+      color: var(--light-text);
+    }
+
+    /* FOR WHO */
+    .forwhom { background: var(--navy); color: white; }
+    .forwhom h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .forwhom-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .forwhom-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255,255,255,0.08);
+      padding: 18px;
+      border-radius: 10px;
+    }
+    .forwhom-item .check {
+      color: var(--coral);
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+    .forwhom-item p { font-size: 0.95rem; opacity: 0.9; }
+
+    /* PRICING */
+    .pricing { background: var(--gray); }
+    .pricing h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 10px;
+      color: var(--navy);
+      text-align: center;
+    }
+    .pricing .subtitle {
+      text-align: center;
+      color: var(--light-text);
+      margin-bottom: 40px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .price-card {
+      background: white;
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .price-card.featured {
+      border: 3px solid var(--coral);
+    }
+    .badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--coral);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      font-family: 'Poppins', sans-serif;
+    }
+    .price-card h3 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--coral);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .price sup {
+      font-size: 1.4rem;
+      vertical-align: super;
+    }
+    .price-features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .price-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gray);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .price-features li::before {
+      content: "✓";
+      color: var(--coral);
+      font-weight: 700;
+    }
+    .btn-buy {
+      display: block;
+      text-align: center;
+      background: var(--coral);
+      color: white;
+      padding: 16px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-buy:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-buy.secondary {
+      background: var(--navy);
+    }
+    .guarantee {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.88rem;
+      color: var(--light-text);
+    }
+    .guarantee strong { color: var(--navy); }
+
+    /* FAQ */
+    .faq { background: white; }
+    .faq h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 36px;
+      color: var(--navy);
+      text-align: center;
+    }
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+    }
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: var(--light-text);
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--coral);
+      color: white;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 36px;
+    }
+    .btn-white {
+      display: inline-block;
+      background: white;
+      color: var(--coral);
+      padding: 18px 44px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-white:hover { transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 36px 24px;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+    footer p { margin-bottom: 8px; }
+
+    @media (max-width: 600px) {
+      .social-proof { gap: 24px; }
+      table { font-size: 0.82rem; }
+      thead th, tbody td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Faceless<span>Fast</span></div>
+  <a href="https://facelessfast.gumroad.com/l/facelessfast-starter" class="nav-cta">Get Instant Access — $37</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>You're Already Scrolling TikTok.<br><span>What If It Started Paying You Back?</span></h1>
+    <p>No camera. No experience. No budget. Earn your first TikTok Shop commission within 7 days — using only your phone and free AI tools.</p>
+    <a href="https://facelessfast.gumroad.com/l/facelessfast-starter" class="btn-primary">Yes — Get Instant Access for $37 →</a>
+    <p class="hero-sub">✓ Instant access &nbsp;|&nbsp; ✓ 30-day money back guarantee &nbsp;|&nbsp; ✓ Pay once, keep forever</p>
+    <div class="social-proof">
+      <div><strong>7 Days</strong><span>to first commission</span></div>
+      <div><strong>$0</strong><span>needed to start</span></div>
+      <div><strong>4 Hours</strong><span>total course length</span></div>
+      <div><strong>100%</strong><span>faceless — no camera</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <h2>You've Probably Already Tried Something.</h2>
+    <p>Maybe it was surveys that paid $0.03. Maybe it was an MLM that cost you $300 and two friendships. Maybe it was a course that required $500/month in tools and 8 hours a day you don't have.</p>
+    <p><strong>Here's the truth nobody tells you:</strong> Most "make money online" strategies are built for people who already have money, time, and tech skills.</p>
+    <p>You need something built for <strong>your</strong> life — around your kids, your schedule, and your budget.</p>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+  <div class="container">
+    <h2>FacelessFast Is Different. Here's Why.</h2>
+    <table>
+      <thead>
+        <tr><th>Everything Else</th><th>FacelessFast</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Requires you to show your face</td><td>100% anonymous — nobody knows it's you</td></tr>
+        <tr><td>Needs $200–$500/month in tools</td><td>Works on $0 — everything free to start</td></tr>
+        <tr><td>Takes 6 months to earn anything</td><td>First commission possible in 7 days</td></tr>
+        <tr><td>Built for tech-savvy people</td><td>Built for complete beginners</td></tr>
+        <tr><td>Overwhelming 40-hour courses</td><td>Under 4 hours — finish in a weekend</td></tr>
+        <tr><td>Vague, outdated strategies</td><td>Current, step-by-step, updated for 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="container">
+    <h2>What You'll Be Able to Do After This Course</h2>
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <div class="icon">📱</div>
+        <p>Make faceless videos using only your phone and free apps — no camera, no mic, no editing experience</p>
+      </div>
+      <div class="outcome-card">
+        <div class="icon">💰</div>
+        <p>Earn commissions on TikTok Shop products you didn't create, manufacture, or ship</p>
+      </div>
+      <div class="outcome-card">
+        <div class="icon">♻️</div>
+        <p>Repurpose every video to Instagram Reels automatically — double your reach in 10 extra minutes</p>
+      </div>
+      <div class="outcome-card">
+        <div class="icon">🤖</div>
+        <p>Script 7 videos in under 20 minutes using free AI — never run out of content ideas</p>
+      </div>
+      <div class="outcome-card">
+        <div class="icon">📊</div>
+        <p>Read your numbers so you know exactly what's working and what to do more of</p>
+      </div>
+      <div class="outcome-card">
+        <div class="icon">📈</div>
+        <p>Build toward $500, $1,000, and $3,000+ per month as your content compounds over time</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCOME -->
+<section class="income">
+  <div class="container">
+    <h2>What Can You Actually Earn?</h2>
+    <p class="subtitle">We believe in being honest with you. Here's the real picture.</p>
+    <div class="milestones">
+      <div class="milestone">
+        <div class="timeline">Days 3–7</div>
+        <div class="amount">First $</div>
+        <div class="desc">First commission arrives after your first few posts</div>
+      </div>
+      <div class="milestone">
+        <div class="timeline">Week 2–4</div>
+        <div class="amount">$100+</div>
+        <div class="desc">Consistent posting starts building momentum</div>
+      </div>
+      <div class="milestone">
+        <div class="timeline">Month 2–3</div>
+        <div class="amount">$500–$2K</div>
+        <div class="desc">System is running, products are converting</div>
+      </div>
+      <div class="milestone">
+        <div class="timeline">Month 6+</div>
+        <div class="amount">$3K–$10K+</div>
+        <div class="desc">Top performers scaling with multiple products</div>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      ⚠️ <strong>Honest disclaimer:</strong> These are real examples from real students, not guarantees. Your results depend entirely on your consistency, niche, and effort. Individual income is not guaranteed. One viral video can change everything — but so can inconsistency. <a href="#disclaimer">See full earnings disclaimer.</a>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="modules">
+  <div class="container">
+    <h2>Everything Inside FacelessFast</h2>
+    <p class="subtitle">9 Modules + Bonus &nbsp;|&nbsp; Under 4 Hours Total &nbsp;|&nbsp; 100% Phone-Friendly</p>
+    <div class="module-list">
+      <div class="module-item">
+        <span class="module-num">Module 0</span>
+        <div><h3>Start Here — Your 7-Day Fast Start Plan</h3><p>Get oriented, set up your tools, and know exactly what to do each day this week.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 1</span>
+        <div><h3>How TikTok Shop Affiliate Actually Works</h3><p>The full picture in plain English — how commissions work, what to expect, and why this beats every other beginner method.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 2</span>
+        <div><h3>Pick Your Niche in 30 Minutes</h3><p>The 5 best niches for beginners in 2026. Includes the Niche Decision Tree worksheet — circle your answers, niche chosen.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 3</span>
+        <div><h3>Set Up TikTok Shop Affiliate Step-by-Step</h3><p>Full account setup walkthrough with screenshots. Covers the Creator Pilot Program for accounts under 5K followers.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 4</span>
+        <div><h3>Make Your First Faceless Video</h3><p>4 formats that work. Full CapCut walkthrough. Your first video posted by end of this module.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 5</span>
+        <div><h3>The Hook Formula — Stop the Scroll</h3><p>Why the first 2 seconds decide everything. Includes 50 copy-paste hook templates.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 6</span>
+        <div><h3>Set Up Instagram Reels as Your Backup</h3><p>Same video, second income stream, 10 extra minutes. Remove the watermark, post to Reels, add affiliate links.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 7</span>
+        <div><h3>Your Weekly Posting System</h3><p>Batch 7 videos every Sunday in 2 hours. Never run out of content. Never stress about what to post.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 8</span>
+        <div><h3>Reading Your Numbers</h3><p>The only 3 metrics that matter. Know what's working, double down, cut what isn't.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Module 9</span>
+        <div><h3>Scaling to $1,000–$3,000/Month</h3><p>The Doubling Rule, free product samples, and adding a second income stream at 60 days.</p></div>
+      </div>
+      <div class="module-item">
+        <span class="module-num">Bonus</span>
+        <div><h3>Instagram-Only Strategy</h3><p>For those avoiding TikTok — full Amazon Associates + Reels system with zero follower requirement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="forwhom">
+  <div class="container">
+    <h2>This Course Was Built Specifically For You If...</h2>
+    <div class="forwhom-list">
+      <div class="forwhom-item"><span class="check">✓</span><p>You're a stay-at-home mom who wants income that fits around your kids</p></div>
+      <div class="forwhom-item"><span class="check">✓</span><p>You don't have a college degree and you're tired of being overlooked</p></div>
+      <div class="forwhom-item"><span class="check">✓</span><p>You're camera-shy or want to stay completely private online</p></div>
+      <div class="forwhom-item"><span class="check">✓</span><p>You've never made a dollar online and don't know where to start</p></div>
+      <div class="forwhom-item"><span class="check">✓</span><p>You've tried other methods and quit because it got too complicated</p></div>
+      <div class="forwhom-item"><span class="check">✓</span><p>You have zero money to waste on tools that might not work</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <h2>Choose Your Path</h2>
+    <p class="subtitle">One-time payment. Instant access. 30-day money-back guarantee.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>FacelessFast Starter</h3>
+        <div class="price"><sup>$</sup>37</div>
+        <ul class="price-features">
+          <li>Full 9-module course + bonus</li>
+          <li>50 Hook Templates (copy & paste)</li>
+          <li>Niche Decision Tree worksheet</li>
+          <li>7-Day Fast Start Checklist</li>
+          <li>90-Day Content Calendar</li>
+          <li>ChatGPT script prompt library</li>
+          <li>Lifetime access + free updates</li>
+        </ul>
+        <a href="https://facelessfast.gumroad.com/l/facelessfast-starter" class="btn-buy secondary">Get Starter — $37</a>
+      </div>
+      <div class="price-card featured">
+        <div class="badge">Most Popular</div>
+        <h3>FacelessFast Pro</h3>
+        <div class="price"><sup>$</sup>67</div>
+        <ul class="price-features">
+          <li>Everything in Starter</li>
+          <li>AI-generated niche report (24hrs)</li>
+          <li>30-day automated coaching emails</li>
+          <li>50 done-for-you video scripts</li>
+          <li>Private community access</li>
+          <li>Priority AI support (24/7)</li>
+          <li>Lifetime access + free updates</li>
+        </ul>
+        <a href="https://facelessfast.gumroad.com/l/facelessfast-pro" class="btn-buy">Get Pro — $67</a>
+      </div>
+    </div>
+    <p class="guarantee">🔒 <strong>30-Day Money-Back Guarantee.</strong> Follow the steps and if you don't get traction, we'll make it right. No questions asked.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Do I need to show my face?</h3>
+      <p>Never. Every strategy in this course is designed to be 100% anonymous. No camera, no voice if you don't want it.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if I have zero followers right now?</h3>
+      <p>We cover this in Module 3. TikTok has a Creator Pilot Program that lets you start earning with fewer than 5,000 followers, with a clear path to full access. Module 1 also covers how to reach 5K followers fast.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need a laptop?</h3>
+      <p>No. Everything in this course can be done from your smartphone.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does it cost to actually do this?</h3>
+      <p>Zero dollars per month. Every tool we recommend has a free tier that's enough to start. You won't spend anything beyond the course price to launch.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How fast can I earn my first commission?</h3>
+      <p>Students who follow the 7-Day Fast Start plan and post their first video typically see their first commission within 3–7 days. Results vary — see our earnings disclaimer.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this legal?</h3>
+      <p>Yes. TikTok Shop Affiliate is an official program run by TikTok. Affiliate marketing is a completely legal, legitimate business model used by millions of people worldwide.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if it doesn't work for me?</h3>
+      <p>30-day money-back guarantee. If you've followed the steps and haven't gotten traction, email us and we'll make it right.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>You've Been Scrolling.<br>Time to Get Paid.</h2>
+    <p>Your first commission could arrive within 7 days. The only thing standing between you and it is one decision.</p>
+    <a href="https://facelessfast.gumroad.com/l/facelessfast-starter" class="btn-white">Get Instant Access — $37 →</a>
+    <p style="margin-top:20px; font-size:0.85rem; opacity:0.8;">✓ Instant access &nbsp;|&nbsp; ✓ 30-day guarantee &nbsp;|&nbsp; ✓ No recurring fees</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="disclaimer">
+  <p><strong style="color:white;">FacelessFast</strong> &nbsp;|&nbsp; A Precision Martech LLC product</p>
+  <p>
+    ⚠️ <strong style="color:white;">Earnings Disclaimer:</strong> Results mentioned are real examples but not typical. Individual results vary based on effort, consistency, niche selection, and other factors outside our control. FacelessFast makes no income guarantees. Starting any online business involves risk.
+  </p>
+  <p>
+    📢 <strong style="color:white;">Affiliate Disclosure:</strong> This course teaches affiliate marketing. Some links in course materials are affiliate links. We only recommend tools we use and believe in.
+  </p>
+  <p style="margin-top:16px;">
+    <a href="mailto:support@precisionmartech.com">Contact</a> &nbsp;|&nbsp;
+    <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="#">Terms of Service</a>
+  </p>
+  <p style="margin-top:12px;">© 2026 Precision Martech LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
