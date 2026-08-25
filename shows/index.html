@@ -6,68 +6,24 @@
 <title>My Shows & Games</title>
 <style>
 :root{--bg:#0f1115;--card:#171a21;--muted:#8d96a7;--text:#f5f7fb;--line:#2a303b;--tv:#7c9cff;--nfl:#58c48d;--good:#63d297}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.wrap{max-width:1100px;margin:auto;padding:18px}.top{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{margin:0;font-size:28px}.sub{color:var(--muted);font-size:14px;margin-top:4px}
-.search{position:relative;flex:1;max-width:480px;min-width:280px}.search input{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);padding:13px;border-radius:12px;font-size:16px}.results{position:absolute;z-index:20;top:50px;left:0;right:0;background:#1b1f27;border:1px solid var(--line);border-radius:12px;overflow:hidden}.result{display:flex;gap:10px;padding:10px;border-bottom:1px solid var(--line);cursor:pointer}.result img{width:44px;height:62px;object-fit:cover;border-radius:6px}.result small{color:var(--muted)}
-.nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.nextcard,.card,.game,.agendaItem{background:var(--card);border:1px solid var(--line);border-radius:14px}.nextcard{padding:14px}.label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.big{font-size:20px;font-weight:700;margin-top:5px}.small{font-size:13px;color:var(--muted);margin-top:4px}
-.nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.nav button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:9px 14px}.nav button.active{background:var(--text);color:#111;border-color:var(--text)}
-.stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.pill{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 11px;color:var(--muted)}.pill b{color:var(--text)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.card{overflow:hidden}.poster{width:100%;aspect-ratio:16/9;object-fit:cover;background:#20242c}.body{padding:13px}.title{font-size:18px;font-weight:700}.meta,.next{font-size:13px;color:var(--muted);margin-top:5px}.next strong{color:var(--good)}.row{display:flex;gap:7px;align-items:center;margin-top:11px}.row input,.row select{background:#11141a;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px}.row input{width:58px}.btn{background:#232833;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px}.danger{margin-left:auto;color:#ff9b9b}
-.calhead{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px}.calhead h2{font-size:20px;margin:0}.calhead button{background:#232833;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
-.week,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.weekday{text-align:center;color:var(--muted);font-size:11px}.day{min-height:108px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px}.date{font-size:12px;color:var(--muted)}.event{font-size:11px;padding:5px 6px;border-radius:6px;margin-top:5px}.event.tv{background:rgba(124,156,255,.15);border-left:3px solid var(--tv)}.event.nfl{background:rgba(88,196,141,.15);border-left:3px solid var(--nfl)}
-.agenda{display:none}.agendaItem{padding:13px;margin-bottom:9px;display:flex;gap:12px}.agendaDate{width:58px;flex:0 0 58px;text-align:center}.agendaDate b{display:block;font-size:22px}.agendaDate span{font-size:11px;color:var(--muted)}.agendaBody{flex:1}.agendaBody b{display:block}.agendaBody .small{line-height:1.35}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}.dot.tv{background:var(--tv)}.dot.nfl{background:var(--nfl)}
-.games{display:grid;gap:9px}.game{padding:13px;display:flex;justify-content:space-between;gap:12px}.right{text-align:right;color:var(--muted);font-size:13px}.empty{border:1px dashed var(--line);border-radius:14px;padding:30px;text-align:center;color:var(--muted)}.hide{display:none}
-@media(max-width:700px){
- .wrap{padding:14px}.search{min-width:100%}.nextgrid{grid-template-columns:1fr}
- .week,.calendar{display:none}.agenda{display:block}
- .calhead{position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}
- .game{display:block}.right{text-align:left;margin-top:5px}
-}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1100px;margin:auto;padding:18px}.top{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{margin:0;font-size:28px}.sub{color:var(--muted);font-size:14px;margin-top:4px}.search{position:relative;flex:1;max-width:480px;min-width:280px}.search input{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);padding:13px;border-radius:12px;font-size:16px}.results{position:absolute;z-index:20;top:50px;left:0;right:0;background:#1b1f27;border:1px solid var(--line);border-radius:12px;overflow:hidden}.result{display:flex;gap:10px;padding:10px;border-bottom:1px solid var(--line);cursor:pointer}.result img{width:44px;height:62px;object-fit:cover;border-radius:6px}.result small{color:var(--muted)}.nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.nextcard,.card,.game,.agendaItem{background:var(--card);border:1px solid var(--line);border-radius:14px}.nextcard{padding:14px}.label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.big{font-size:20px;font-weight:700;margin-top:5px}.small{font-size:13px;color:var(--muted);margin-top:4px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.nav button{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:9px 14px}.nav button.active{background:var(--text);color:#111;border-color:var(--text)}.stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.pill{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 11px;color:var(--muted)}.pill b{color:var(--text)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.card{overflow:hidden}.poster{width:100%;aspect-ratio:16/9;object-fit:cover;background:#20242c}.body{padding:13px}.title{font-size:18px;font-weight:700}.meta,.next{font-size:13px;color:var(--muted);margin-top:5px}.next strong{color:var(--good)}.row{display:flex;gap:7px;align-items:center;margin-top:11px}.row input,.row select{background:#11141a;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px}.row input{width:58px}.btn{background:#232833;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px}.danger{margin-left:auto;color:#ff9b9b}.calhead{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px}.calhead h2{font-size:20px;margin:0}.calhead button{background:#232833;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px}.week,.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.weekday{text-align:center;color:var(--muted);font-size:11px}.day{min-height:108px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px}.date{font-size:12px;color:var(--muted)}.event{font-size:11px;padding:5px 6px;border-radius:6px;margin-top:5px}.event.tv{background:rgba(124,156,255,.15);border-left:3px solid var(--tv)}.event.nfl{background:rgba(88,196,141,.15);border-left:3px solid var(--nfl)}.agenda{display:none}.agendaItem{padding:13px;margin-bottom:9px;display:flex;gap:12px}.agendaDate{width:58px;flex:0 0 58px;text-align:center}.agendaDate b{display:block;font-size:22px}.agendaDate span{font-size:11px;color:var(--muted)}.agendaBody{flex:1}.agendaBody b{display:block}.agendaBody .small{line-height:1.35}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}.dot.tv{background:var(--tv)}.dot.nfl{background:var(--nfl)}.games{display:grid;gap:9px}.game{padding:13px;display:flex;justify-content:space-between;gap:12px}.right{text-align:right;color:var(--muted);font-size:13px}.empty{border:1px dashed var(--line);border-radius:14px;padding:30px;text-align:center;color:var(--muted)}.hide{display:none}.sync{font-size:12px;color:var(--muted);margin:8px 0 14px}
+@media(max-width:700px){.wrap{padding:14px}.search{min-width:100%}.nextgrid{grid-template-columns:1fr}.week,.calendar{display:none}.agenda{display:block}.calhead{position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}.game{display:block}.right{text-align:left;margin-top:5px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="top">
-  <div><h1>My Shows & Games</h1><div class="sub">TV progress, upcoming episodes, and Eagles football.</div></div>
-  <div class="search"><input id="search" placeholder="Search for a TV show..." autocomplete="off"><div id="results" class="results" hidden></div></div>
-</div>
-
+<div class="top"><div><h1>My Shows & Games</h1><div class="sub">TV progress, upcoming episodes, and Eagles football.</div></div><div class="search"><input id="search" placeholder="Search for a TV show..." autocomplete="off"><div id="results" class="results" hidden></div></div></div>
 <div id="nextgrid" class="nextgrid"></div>
-
-<div class="nav" id="mainNav">
-  <button class="active" data-page="shows">Shows</button>
-  <button data-page="calendar">Calendar</button>
-  <button data-page="football">Eagles</button>
-</div>
-
-<section id="showsPage">
-  <div id="stats" class="stats"></div>
-  <div class="nav" id="showTabs">
-    <button class="active" data-filter="Watching">Watching</button>
-    <button data-filter="Want to Watch">Want to Watch</button>
-    <button data-filter="Finished">Finished</button>
-    <button data-filter="All">All</button>
-  </div>
-  <div id="grid" class="grid"></div>
-</section>
-
-<section id="calendarPage" class="hide">
-  <div class="calhead"><button id="prevMonth">‹</button><h2 id="monthTitle"></h2><button id="nextMonth">›</button></div>
-  <div class="week"><div class="weekday">SUN</div><div class="weekday">MON</div><div class="weekday">TUE</div><div class="weekday">WED</div><div class="weekday">THU</div><div class="weekday">FRI</div><div class="weekday">SAT</div></div>
-  <div id="calendar" class="calendar"></div>
-  <div id="agenda" class="agenda"></div>
-</section>
-
+<div class="nav" id="mainNav"><button class="active" data-page="shows">Shows</button><button data-page="calendar">Calendar</button><button data-page="football">Eagles</button></div>
+<section id="showsPage"><div id="stats" class="stats"></div><div class="nav" id="showTabs"><button class="active" data-filter="Watching">Watching</button><button data-filter="Want to Watch">Want to Watch</button><button data-filter="Finished">Finished</button><button data-filter="All">All</button></div><div id="grid" class="grid"></div></section>
+<section id="calendarPage" class="hide"><div class="calhead"><button id="prevMonth">‹</button><h2 id="monthTitle"></h2><button id="nextMonth">›</button></div><div id="syncStatus" class="sync"></div><div class="week"><div class="weekday">SUN</div><div class="weekday">MON</div><div class="weekday">TUE</div><div class="weekday">WED</div><div class="weekday">THU</div><div class="weekday">FRI</div><div class="weekday">SAT</div></div><div id="calendar" class="calendar"></div><div id="agenda" class="agenda"></div></section>
 <section id="footballPage" class="hide"><div id="games" class="games"></div></section>
 </div>
-
 <script>
-const KEY='my-shows-v1';
-let shows=JSON.parse(localStorage.getItem(KEY)||'[]');
-let currentFilter='Watching';
-let calDate=new Date();
-const $=s=>document.querySelector(s);
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const KEY='my-shows-v2';
+const OLDKEY='my-shows-v1';
+let shows=JSON.parse(localStorage.getItem(KEY)||localStorage.getItem(OLDKEY)||'[]');
+let currentFilter='Watching';let calDate=new Date();const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#039;'}[m]));
 const games=[
 {date:'2026-08-28T20:00:00-04:00',opponent:'Cincinnati Bengals',where:'vs',week:'Preseason Week 3',network:'CBS'},
 {date:'2026-09-13T16:25:00-04:00',opponent:'Washington Commanders',where:'vs',week:'Week 1',network:'FOX'},
@@ -85,88 +41,21 @@ const games=[
 {date:'2026-12-13T13:00:00-05:00',opponent:'Indianapolis Colts',where:'vs',week:'Week 14',network:'FOX'},
 {date:'2026-12-19T17:00:00-05:00',opponent:'Seattle Seahawks',where:'vs',week:'Week 15',network:'FOX'},
 {date:'2026-12-24T20:15:00-05:00',opponent:'Houston Texans',where:'vs',week:'Week 16',network:'Prime Video'},
-{date:'2027-01-03T20:20:00-05:00',opponent:'San Francisco 49ers',where:'at',week:'Week 17',network:'NBC'}
-];
-
-function save(){localStorage.setItem(KEY,JSON.stringify(shows));renderAll()}
-function imageFor(s){return s.image?.original||s.image?.medium||''}
-function fmt(v){return new Date(v).toLocaleString(undefined,{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
-
-async function enrich(show){
- try{
-  const r=await fetch(`https://api.tvmaze.com/shows/${show.id}?embed=nextepisode`);
-  const d=await r.json(); const n=d._embedded?.nextepisode;
-  return {...show,next:n?{name:n.name,season:n.season,number:n.number,date:n.airdate,airtime:n.airtime||'20:00'}:null};
- }catch(e){return show}
-}
-async function addShow(raw){
- if(shows.some(s=>s.id===raw.id))return;
- const base={id:raw.id,name:raw.name,image:raw.image,network:raw.network?.name||raw.webChannel?.name||'',status:'Watching',season:1,episode:0,next:null};
- shows.unshift(await enrich(base)); save(); $('#results').hidden=true; $('#search').value='';
-}
-function updateShow(id,field,val){const s=shows.find(x=>x.id===id);if(!s)return;s[field]=(field==='season'||field==='episode')?Math.max(0,Number(val)||0):val;save()}
-function removeShow(id){shows=shows.filter(s=>s.id!==id);save()}
-async function refreshOne(id){const i=shows.findIndex(s=>s.id===id);if(i<0)return;shows[i]=await enrich(shows[i]);save()}
-
-function renderShows(){
- const visible=currentFilter==='All'?shows:shows.filter(s=>s.status===currentFilter);
- $('#stats').innerHTML=`<div class="pill"><b>${shows.filter(s=>s.status==='Watching').length}</b> watching</div><div class="pill"><b>${shows.filter(s=>s.status==='Want to Watch').length}</b> queued</div><div class="pill"><b>${shows.filter(s=>s.status==='Finished').length}</b> finished</div>`;
- if(!visible.length){$('#grid').innerHTML='<div class="empty">No shows here yet. Search above to add one.</div>';return}
- $('#grid').innerHTML=visible.map(s=>`<div class="card">${imageFor(s)?`<img class="poster" src="${esc(imageFor(s))}" alt="">`:'<div class="poster"></div>'}<div class="body"><div class="title">${esc(s.name)}</div><div class="meta">${esc(s.network||'Network not listed')} · ${esc(s.status)}</div><div class="next">${s.next?`Next: <strong>S${s.next.season} E${s.next.number}</strong> ${esc(s.next.name)} · ${esc(s.next.date)} ${esc(s.next.airtime)}`:'No upcoming episode listed'}</div><div class="row"><span>S</span><input type="number" min="0" value="${s.season}" onchange="updateShow(${s.id},'season',this.value)"><span>E</span><input type="number" min="0" value="${s.episode}" onchange="updateShow(${s.id},'episode',this.value)"></div><div class="row"><select onchange="updateShow(${s.id},'status',this.value)">${['Watching','Want to Watch','Finished'].map(v=>`<option ${v===s.status?'selected':''}>${v}</option>`).join('')}</select><button class="btn" onclick="refreshOne(${s.id})">Refresh</button><button class="btn danger" onclick="removeShow(${s.id})">Remove</button></div></div></div>`).join('');
-}
-
-function allEvents(){
- const tv=shows.filter(s=>s.status==='Watching'&&s.next?.date).map(s=>({type:'tv',date:new Date(`${s.next.date}T${s.next.airtime||'20:00'}:00`),title:`${s.name} S${s.next.season}E${s.next.number}`,detail:s.next.name||''}));
- const nfl=games.map(g=>({type:'nfl',date:new Date(g.date),title:`Eagles ${g.where} ${g.opponent}`,detail:`${g.week} · ${g.network}`}));
- return [...tv,...nfl].sort((a,b)=>a.date-b.date);
-}
-function renderNext(){
- const now=new Date(); const ev=allEvents().filter(e=>e.date>now);
- const nextTv=ev.find(e=>e.type==='tv'); const nextNfl=ev.find(e=>e.type==='nfl');
- $('#nextgrid').innerHTML=
- `<div class="nextcard"><div class="label">Next Episode</div><div class="big">${nextTv?esc(nextTv.title):'Nothing scheduled'}</div><div class="small">${nextTv?fmt(nextTv.date):'Add or refresh a show to see its next episode.'}</div></div>`+
- `<div class="nextcard"><div class="label">Next Eagles Game</div><div class="big">${nextNfl?esc(nextNfl.title):'No game scheduled'}</div><div class="small">${nextNfl?fmt(nextNfl.date)+' · '+esc(nextNfl.detail):''}</div></div>`;
-}
-function renderGames(){
- const now=new Date();
- const list=games.filter(g=>new Date(g.date)>now);
- $('#games').innerHTML=list.map(g=>`<div class="game"><div><b>Eagles ${g.where} ${esc(g.opponent)}</b><div class="small">${esc(g.week)}</div></div><div class="right">${fmt(g.date)}<br>${esc(g.network)}</div></div>`).join('')||'<div class="empty">No upcoming Eagles games.</div>';
-}
-function renderCalendar(){
- const y=calDate.getFullYear(),m=calDate.getMonth();
- $('#monthTitle').textContent=calDate.toLocaleDateString(undefined,{month:'long',year:'numeric'});
- const events=allEvents().filter(e=>e.date.getFullYear()===y&&e.date.getMonth()===m);
- const first=new Date(y,m,1), last=new Date(y,m+1,0), cells=[];
- for(let i=0;i<first.getDay();i++)cells.push('');
- for(let d=1;d<=last.getDate();d++){
-  const dayEvents=events.filter(e=>e.date.getDate()===d);
-  cells.push(`<div class="day"><div class="date">${d}</div>${dayEvents.map(e=>`<div class="event ${e.type}">${esc(e.title)}</div>`).join('')}</div>`);
- }
- $('#calendar').innerHTML=cells.map(c=>c||'<div></div>').join('');
- $('#agenda').innerHTML=events.length?events.map(e=>`<div class="agendaItem"><div class="agendaDate"><span>${e.date.toLocaleDateString(undefined,{weekday:'short'}).toUpperCase()}</span><b>${e.date.getDate()}</b><span>${e.date.toLocaleDateString(undefined,{month:'short'}).toUpperCase()}</span></div><div class="agendaBody"><b><span class="dot ${e.type}"></span>${esc(e.title)}</b><div class="small">${fmt(e.date)}${e.detail?' · '+esc(e.detail):''}</div></div></div>`).join(''):'<div class="empty">Nothing scheduled this month.</div>';
-}
-
-function renderAll(){renderShows();renderNext();renderGames();renderCalendar()}
-
-let timer;
-$('#search').addEventListener('input',e=>{
- clearTimeout(timer);const q=e.target.value.trim();if(q.length<2){$('#results').hidden=true;return}
- timer=setTimeout(async()=>{try{
-  const r=await fetch('https://api.tvmaze.com/search/shows?q='+encodeURIComponent(q));const data=await r.json();
-  $('#results').innerHTML=data.slice(0,7).map(x=>{const s=x.show;return `<div class="result">${s.image?.medium?`<img src="${esc(s.image.medium)}">`:''}<div><b>${esc(s.name)}</b><br><small>${esc((s.premiered||'').slice(0,4))} ${esc(s.network?.name||s.webChannel?.name||'')}</small></div></div>`}).join('');
-  [...$('#results').children].forEach((el,i)=>el.onclick=()=>addShow(data[i].show));$('#results').hidden=!data.length;
- }catch(e){$('#results').innerHTML='<div class="result">Search failed. Try again.</div>';$('#results').hidden=false}},250)
-});
-document.addEventListener('click',e=>{if(!e.target.closest('.search'))$('#results').hidden=true});
-$('#mainNav').querySelectorAll('button').forEach(b=>b.onclick=()=>{
- $('#mainNav').querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');
- ['shows','calendar','football'].forEach(p=>$('#'+p+'Page').classList.toggle('hide',p!==b.dataset.page));
-});
-$('#showTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#showTabs').querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');currentFilter=b.dataset.filter;renderShows()});
-$('#prevMonth').onclick=()=>{calDate=new Date(calDate.getFullYear(),calDate.getMonth()-1,1);renderCalendar()};
-$('#nextMonth').onclick=()=>{calDate=new Date(calDate.getFullYear(),calDate.getMonth()+1,1);renderCalendar()};
-renderAll();
-shows.forEach(async(s,i)=>{shows[i]=await enrich(s);if(i===shows.length-1)save()});
+{date:'2027-01-03T20:20:00-05:00',opponent:'San Francisco 49ers',where:'at',week:'Week 17',network:'NBC'}];
+function save(){localStorage.setItem(KEY,JSON.stringify(shows));renderAll()}function imageFor(s){return s.image?.original||s.image?.medium||''}function fmt(v){return new Date(v).toLocaleString(undefined,{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+function episodeDate(e){if(!e.airdate)return null;const time=(e.airtime&&/^\d\d:\d\d$/.test(e.airtime))?e.airtime:'20:00';return new Date(`${e.airdate}T${time}:00`)}
+async function enrich(show){try{const [sr,er]=await Promise.all([fetch(`https://api.tvmaze.com/shows/${show.id}?embed=nextepisode`),fetch(`https://api.tvmaze.com/shows/${show.id}/episodes?specials=1`)]);const sd=await sr.json();const eps=await er.json();const now=new Date();const future=(Array.isArray(eps)?eps:[]).filter(e=>{const d=episodeDate(e);return d&&d>=new Date(now.getFullYear(),now.getMonth(),now.getDate())}).map(e=>({id:e.id,name:e.name,season:e.season,number:e.number,date:e.airdate,airtime:e.airtime||'20:00'})).sort((a,b)=>episodeDate(a)-episodeDate(b));const n=future[0]||sd._embedded?.nextepisode;return {...show,next:n?{name:n.name,season:n.season,number:n.number,date:n.date||n.airdate,airtime:n.airtime||'20:00'}:null,futureEpisodes:future,lastSynced:new Date().toISOString()}}catch(e){return {...show,futureEpisodes:show.futureEpisodes||[]}}}
+async function addShow(raw){if(shows.some(s=>s.id===raw.id))return;const base={id:raw.id,name:raw.name,image:raw.image,network:raw.network?.name||raw.webChannel?.name||'',status:'Watching',season:1,episode:0,next:null,futureEpisodes:[]};shows.unshift(await enrich(base));save();$('#results').hidden=true;$('#search').value=''}
+function updateShow(id,field,val){const s=shows.find(x=>x.id===id);if(!s)return;s[field]=(field==='season'||field==='episode')?Math.max(0,Number(val)||0):val;save()}function removeShow(id){shows=shows.filter(s=>s.id!==id);save()}async function refreshOne(id){const i=shows.findIndex(s=>s.id===id);if(i<0)return;shows[i]=await enrich(shows[i]);save()}async function refreshAll(){const watching=shows.map((s,i)=>({s,i})).filter(x=>x.s.status==='Watching');if(!watching.length)return;$('#syncStatus').textContent='Updating announced episode dates…';for(const x of watching){shows[x.i]=await enrich(shows[x.i])}localStorage.setItem(KEY,JSON.stringify(shows));$('#syncStatus').textContent='Episode dates updated.';renderAll()}
+function renderShows(){const visible=currentFilter==='All'?shows:shows.filter(s=>s.status===currentFilter);$('#stats').innerHTML=`<div class="pill"><b>${shows.filter(s=>s.status==='Watching').length}</b> watching</div><div class="pill"><b>${shows.filter(s=>s.status==='Want to Watch').length}</b> queued</div><div class="pill"><b>${shows.filter(s=>s.status==='Finished').length}</b> finished</div>`;if(!visible.length){$('#grid').innerHTML='<div class="empty">No shows here yet. Search above to add one.</div>';return}$('#grid').innerHTML=visible.map(s=>`<div class="card">${imageFor(s)?`<img class="poster" src="${esc(imageFor(s))}" alt="">`:'<div class="poster"></div>'}<div class="body"><div class="title">${esc(s.name)}</div><div class="meta">${esc(s.network||'Network not listed')} · ${esc(s.status)}</div><div class="next">${s.next?`Next: <strong>S${s.next.season} E${s.next.number}</strong> ${esc(s.next.name)} · ${esc(s.next.date)} ${esc(s.next.airtime)}`:'No upcoming episode listed'}</div><div class="meta">${(s.futureEpisodes||[]).length} announced future episode${(s.futureEpisodes||[]).length===1?'':'s'}</div><div class="row"><span>S</span><input type="number" min="0" value="${s.season}" onchange="updateShow(${s.id},'season',this.value)"><span>E</span><input type="number" min="0" value="${s.episode}" onchange="updateShow(${s.id},'episode',this.value)"></div><div class="row"><select onchange="updateShow(${s.id},'status',this.value)">${['Watching','Want to Watch','Finished'].map(v=>`<option ${v===s.status?'selected':''}>${v}</option>`).join('')}</select><button class="btn" onclick="refreshOne(${s.id})">Refresh</button><button class="btn danger" onclick="removeShow(${s.id})">Remove</button></div></div></div>`).join('')}
+function allEvents(){const tv=[];shows.filter(s=>s.status==='Watching').forEach(s=>(s.futureEpisodes||[]).forEach(e=>{const d=episodeDate(e);if(d)tv.push({type:'tv',date:d,title:`${s.name} S${e.season}E${e.number}`,detail:e.name||''})}));const nfl=games.map(g=>({type:'nfl',date:new Date(g.date),title:`Eagles ${g.where} ${g.opponent}`,detail:`${g.week} · ${g.network}`}));return [...tv,...nfl].sort((a,b)=>a.date-b.date)}
+function renderNext(){const now=new Date(),ev=allEvents().filter(e=>e.date>now),nextTv=ev.find(e=>e.type==='tv'),nextNfl=ev.find(e=>e.type==='nfl');$('#nextgrid').innerHTML=`<div class="nextcard"><div class="label">Next Episode</div><div class="big">${nextTv?esc(nextTv.title):'Nothing scheduled'}</div><div class="small">${nextTv?fmt(nextTv.date):'No announced episode date.'}</div></div><div class="nextcard"><div class="label">Next Eagles Game</div><div class="big">${nextNfl?esc(nextNfl.title):'No game scheduled'}</div><div class="small">${nextNfl?fmt(nextNfl.date):''}</div></div>`}
+function renderCalendar(){const y=calDate.getFullYear(),m=calDate.getMonth();$('#monthTitle').textContent=calDate.toLocaleDateString(undefined,{month:'long',year:'numeric'});const ev=allEvents().filter(e=>e.date.getFullYear()===y&&e.date.getMonth()===m);const first=new Date(y,m,1),start=new Date(y,m,1-first.getDay());let html='';for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const dayEv=ev.filter(e=>e.date.toDateString()===d.toDateString());html+=`<div class="day" style="${d.getMonth()!==m?'opacity:.35':''}"><div class="date">${d.getDate()}</div>${dayEv.map(e=>`<div class="event ${e.type}">${esc(e.title)}</div>`).join('')}</div>`}$('#calendar').innerHTML=html;const days=[...new Set(ev.map(e=>e.date.toDateString()))].map(s=>new Date(s)).sort((a,b)=>a-b);$('#agenda').innerHTML=days.length?days.map(d=>{const dayEv=ev.filter(e=>e.date.toDateString()===d.toDateString());return `<div class="agendaItem"><div class="agendaDate"><span>${d.toLocaleDateString(undefined,{weekday:'short'}).toUpperCase()}</span><b>${d.getDate()}</b><span>${d.toLocaleDateString(undefined,{month:'short'}).toUpperCase()}</span></div><div class="agendaBody">${dayEv.map(e=>`<div style="margin-bottom:10px"><b><span class="dot ${e.type}"></span>${esc(e.title)}</b><div class="small">${esc(e.detail)} · ${e.date.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}</div></div>`).join('')}</div></div>`}).join(''):'<div class="empty">Nothing announced for this month yet.</div>'}
+function renderGames(){const now=new Date(),future=games.filter(g=>new Date(g.date)>now);$('#games').innerHTML=future.map(g=>`<div class="game"><div><b>Eagles ${g.where} ${esc(g.opponent)}</b><div class="small">${esc(g.week)}</div></div><div class="right">${fmt(g.date)}<br>${esc(g.network)}</div></div>`).join('')}
+function renderAll(){renderShows();renderNext();renderCalendar();renderGames()}
+let timer;$('#search').addEventListener('input',e=>{clearTimeout(timer);const q=e.target.value.trim();if(q.length<2){$('#results').hidden=true;return}timer=setTimeout(async()=>{try{const r=await fetch('https://api.tvmaze.com/search/shows?q='+encodeURIComponent(q));const data=await r.json();$('#results').innerHTML=data.slice(0,7).map(x=>{const s=x.show,img=s.image?.medium||'';return `<div class="result">${img?`<img src="${esc(img)}" alt="">`:''}<div><b>${esc(s.name)}</b><br><small>${esc((s.premiered||'').slice(0,4))} ${esc(s.network?.name||s.webChannel?.name||'')}</small></div></div>`}).join('');[...$('#results').children].forEach((el,i)=>el.onclick=()=>addShow(data[i].show));$('#results').hidden=!data.length}catch(e){$('#results').hidden=false;$('#results').innerHTML='<div class="result">Search failed. Try again.</div>'}},300)});document.addEventListener('click',e=>{if(!e.target.closest('.search'))$('#results').hidden=true});
+$('#mainNav').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#mainNav').querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');['shows','calendar','football'].forEach(p=>$('#'+p+'Page').classList.toggle('hide',p!==b.dataset.page));if(b.dataset.page==='calendar')refreshAll()});$('#showTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#showTabs').querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');currentFilter=b.dataset.filter;renderShows()});$('#prevMonth').onclick=()=>{calDate=new Date(calDate.getFullYear(),calDate.getMonth()-1,1);renderCalendar()};$('#nextMonth').onclick=()=>{calDate=new Date(calDate.getFullYear(),calDate.getMonth()+1,1);renderCalendar()};
+renderAll();refreshAll();
 </script>
 </body>
 </html>
